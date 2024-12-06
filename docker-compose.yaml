@@ -3,17 +3,18 @@ services:
 
   nats:
     image: docker.io/library/nats-streaming:0.25.6
+    command: "--store=memory --cluster_id=faas-cluster"
 # nobody
-    user: "65534"
+    #user: "65534"
     #entrypoint: ["nats-streaming-server"]
-    command:
+    #command:
       #- '/nats-streaming-server'
-      - "/usr/local/bin/nats-streaming-server"
-      - "-m"
-      - "8222"
-      - "--store=file"
-      - "--dir=/nats"
-      - "--cluster_id=faas-cluster"
+      #- "/usr/local/bin/nats-streaming-server"
+      #- "-m"
+      #- "8222"
+      #- "--store=file"
+      #- "--dir=/nats"
+      #- "--cluster_id=faas-cluster"
     volumes:
 # Data directory
       - type: bind
