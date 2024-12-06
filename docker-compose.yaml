@@ -45,7 +45,7 @@ services:
     image: ghcr.io/openfaas/gateway:0.27.10
     environment:
       - basic_auth=true
-      - functions_provider_url=http://faasd-provider:8081/
+      - functions_provider_url=http://127.0.0.1:8081/
       - direct_functions=false
       - read_timeout=60s
       - write_timeout=60s
