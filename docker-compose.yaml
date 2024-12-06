@@ -6,7 +6,7 @@ services:
 # nobody
     user: "65534"
     command:
-      - "/nats-streaming-server"
+      - "nats-streaming-server"
       - "-m"
       - "8222"
       - "--store=file"
